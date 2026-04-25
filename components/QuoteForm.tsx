@@ -168,11 +168,11 @@ export default function QuoteForm() {
                     const isRequired = REQUIRED_FIELDS.includes(field.name);
                     const hasError = errors[field.name];
 
-                    const inputClasses = `w-full bg-white/8 border ${
+                    const inputClasses = `w-full bg-navy border ${
                       hasError
                         ? "border-red-400/60 focus:border-red-400"
-                        : "border-white/15 focus:border-accent/60"
-                    } rounded-xl px-4 py-3 text-white placeholder-white/30 text-sm focus:outline-none focus:ring-2 ${
+                        : "border-white/20 focus:border-accent"
+                    } rounded-xl px-4 py-3 text-white placeholder-white/40 text-sm focus:outline-none focus:ring-2 ${
                       hasError ? "focus:ring-red-400/20" : "focus:ring-accent/20"
                     } transition-all`;
 
