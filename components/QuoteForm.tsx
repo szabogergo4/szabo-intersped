@@ -158,10 +158,8 @@ export default function QuoteForm() {
                 </button>
               </motion.div>
             ) : (
-              <motion.form
+              <form
                 key="form"
-                initial={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
                 onSubmit={handleSubmit}
                 noValidate
               >
@@ -224,6 +222,7 @@ export default function QuoteForm() {
 
                 <button
                   type="submit"
+
                   disabled={loading}
                   className="mt-8 w-full flex items-center justify-center gap-3 px-8 py-4 bg-accent hover:bg-accent-dark disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold text-base rounded-xl shadow-xl shadow-accent/20 hover:shadow-accent/30 transition-all duration-300"
                 >
@@ -243,7 +242,7 @@ export default function QuoteForm() {
                   {t.quote.fields.from}, {t.quote.fields.to},{" "}
                   {t.quote.fields.cargo}
                 </p>
-              </motion.form>
+              </form>
             )}
           </AnimatePresence>
         </motion.div>
